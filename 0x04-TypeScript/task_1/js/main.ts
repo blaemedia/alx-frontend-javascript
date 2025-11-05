@@ -4,7 +4,7 @@ interface StudentConstructor {
   lastName: string;
 }
 
-interface StudentInterface {
+interface StudentInterface{
   workOnHomework(): string;
   displayName(): string;
 }
