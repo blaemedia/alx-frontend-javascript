@@ -7,7 +7,7 @@ interface Teacher {
   [key: string]: any; // allows additional properties
 }
 
-interface Directors extends Teacher {
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
@@ -21,7 +21,7 @@ const teacher1: Teacher = {
   contract: false, // extra property allowed
 };
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'Jane',
   lastName: 'Smith',
   fullTimeEmployee: true,
