@@ -11,14 +11,18 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
-// Example usage:
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+
 const teacher1: Teacher = {
 
   firstName: 'John',
   lastName: 'Doe',
   fullTimeEmployee: true,
   location: 'Lagos',
-  contract: false, // extra property allowed
+  contract: false, 
 };
 
 const director1: Director = {
@@ -29,5 +33,14 @@ const director1: Director = {
   numberOfReports: 5
 };
 
+
+
+
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
 console.log(teacher1);
 console.log(director1);
