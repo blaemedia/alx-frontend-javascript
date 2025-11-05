@@ -1,3 +1,24 @@
+
+class StudentClass implements StudentInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+
+
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -26,6 +47,11 @@ interface printTeacherFunction {
 }
 
 
+
+
+
+
+
 const teacher1: Teacher = {
 
   firstName: 'John',
@@ -42,28 +68,6 @@ const director1: Director = {
   location: 'New York',
   numberOfReports: 5
 };
-
-
-
-class StudentClass implements StudentInterface {
-  firstName: string;
-  lastName: string;
-
-  constructor(firstName: string, lastName: string) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  workOnHomework(): string {
-    return "Currently working";
-  }
-
-  displayName(): string {
-    return this.firstName;
-  }
-}
-
-
 
 
 const student1 = new StudentClass("Alice", "Smith");
