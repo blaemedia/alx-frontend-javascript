@@ -1,4 +1,14 @@
 
+interface StudentConstructor {
+  firstName: string;
+  lastName: string;
+}
+
+interface StudentInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
 class StudentClass implements StudentInterface {
   firstName: string;
   lastName: string;
@@ -28,15 +38,6 @@ interface Teacher {
   [key: string]: any; // allows additional properties
 }
 
-interface StudentConstructor {
-  firstName: string;
-  lastName: string;
-}
-
-interface StudentInterface {
-  workOnHomework(): string;
-  displayName(): string;
-}
 
 interface Director extends Teacher {
   numberOfReports: number;
