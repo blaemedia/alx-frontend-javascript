@@ -1,32 +1,20 @@
-// Import RowID and RowElement from interface.ts
 import { RowID, RowElement } from './interface';
 
-// Declare the crud functions (only types, no implementations)
-export function insertRow(row: RowElement): RowID;
-export function deleteRow(rowId: RowID): void;
-export function updateRow(rowId: RowID, row: RowElement): RowID;
-
+declare function insertRow(row: RowElement): number;
+declare function deleteRow(rowId: RowID): void;
+declare function updateRow(rowId: RowID, row: RowElement): RowID;
 
 export function insertRow(row) {
   console.log('Insert row', row);
   return Math.floor(Math.random() * Math.floor(1000));
 }
 
-export function deleteRow(rowId:RO) {
+export function deleteRow(rowId) {
   console.log('Delete row id', rowId);
   return;
 }
 
 export function updateRow(rowId, row) {
   console.log(`Update row ${rowId}`, row);
-
   return rowId;
 }
-
-
-
-
-// Declare the crud functions
-export function insertRow(row: RowElement): RowID;
-export function deleteRow(rowId: RowID): void;
-export function updateRow(rowId: RowID, row: RowElement): RowID;
