@@ -54,15 +54,19 @@ function createEmployee(salary: number | string): Director | Teacher {
 
 
 
-// Define string literal type
+// String literal type
 type Subjects = 'Math' | 'History';
 
-// Function to teach class
+// teachClass function with explicit type annotation
 function teachClass(todayClass: Subjects): string {
-  return `Teaching ${todayClass}`;
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else {
+    return 'Teaching History';
+  }
 }
 
-// Test cases
+// Test
 console.log(teachClass('Math'));     // Teaching Math
 console.log(teachClass('History'));  // Teaching History
 
