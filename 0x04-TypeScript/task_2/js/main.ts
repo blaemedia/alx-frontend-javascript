@@ -58,7 +58,7 @@ function createEmployee(salary: number | string): Director | Teacher {
 type Subjects = 'Math' | 'History';
 
 // teachClass function with explicit type annotation
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else {
